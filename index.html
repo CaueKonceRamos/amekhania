@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amekhania</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app">
+    <section id="screen-enter" class="screen active">
+      <div class="card">
+        <div id="prompt">Qual o seu nome?</div>
+        <input id="name-input" autocomplete="off" autocapitalize="words" placeholder="" />
+        <button id="submit-btn" class="submit" aria-label="Enviar nome">Entrar</button>
+        <div class="hint">ou toque em Entrar</div>
+      </div>
+    </section>
+
+    <section id="screen-intro" class="screen">
+      <div class="card">
+        <div id="intro-text" class="mono"></div>
+      </div>
+    </section>
+
+    <section id="screen-choices" class="screen">
+      <div class="card">
+        <div id="reveal" class="mono"></div>
+        <div class="choices">
+          <button data-action="continue">Continuar</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="screen-rules" class="screen">
+      <div class="card rules">
+        <div id="rules-text" class="mono"></div>
+        <div id="rules-controls">
+          <div id="rules-progress" aria-hidden="true"></div>
+          <button id="rules-next" class="cta small">Próximo</button>
+        </div>
+        <div class="video">
+          <a id="rules-video-link" class="video-link" style="display:none" href="https://www.youtube.com/%40dwarvendad?utm_source=chatgpt.com" target="_blank" rel="noopener">Abrir explicação (YouTube)</a>
+        </div>
+        <button id="enter-game" class="cta">Entrar em Amekhania</button>
+      </div>
+    </section>
+
+    <audio id="ambient-audio" hidden></audio>
+    <div id="amekhania-image-wrap" class="amekhania-image">
+      <img src="img/amekhania.png" alt="Amekhania" />
+      <button id="reset-game" class="cta small reset">Voltar ao começo</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
