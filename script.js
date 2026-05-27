@@ -116,17 +116,6 @@ async function initApp(){
     }));
   }
 
-  const enterGameBtn = $('#enter-game');
-  if(enterGameBtn){
-    enterGameBtn.addEventListener('click', ()=>{
-      // reveal the final image with a slow fade-in overlay
-      const img = $('#amekhania-image-wrap');
-      if(img){ setTimeout(()=> img.classList.add('visible'), 60); }
-      enterGameBtn.textContent = 'Aguarde...';
-      setTimeout(()=>{ enterGameBtn.textContent = 'Entrar em Amekhania'; },1500);
-    });
-  }
-
   const resetBtn = $('#reset-game');
   if(resetBtn){
     resetBtn.addEventListener('click', ()=>{
@@ -257,7 +246,10 @@ async function revealRoleIfSpecial(){
 // after finishing fragments, reveal video link and enable enter
 async function finalizeRulesDisplay(){
   const link = $('#rules-video-link'); if(link) link.style.display = 'inline-block';
-  const enterBtn = $('#enter-game'); if(enterBtn) enterBtn.style.display = 'inline-block';
+  const img = $('#amekhania-image-wrap');
+  if(img){
+    setTimeout(()=> img.classList.add('visible'), 600);
+  }
 }
 
 // Audio setup: global audio context, subtle static and heartbeat, and button blips
