@@ -7,7 +7,10 @@ const nameMap = {
   'wanderson':'Carvalho',
   'ygor':'Eco',
   'kaique':'Índigo',
-  'neto':'Plutão'
+  'neto':'Plutão',
+  'jon':'Zêta',
+  'john':'Zêta',
+  'jonh':'Zêta'
 };
 const reserves = ['Neblina','Lúmen','Cifra','Órbita'];
 
